@@ -1,0 +1,9 @@
+$gcc -shared -fPIC -o lib<libfilename>.so <libfilename>.c
+
+$gcc -o0 -o <programfilename>.o -c <programfilename>.c
+
+$gcc -o <programfilename> <programfilename>.o lib<libfilename>.so
+
+$export LD_LIBRARY_PATH=$PWD
+
+$./<programfilename>
